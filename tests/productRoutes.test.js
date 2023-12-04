@@ -62,7 +62,7 @@ describe('PUT /product/:id', () => {
         };
 
         const response = await request(server)
-            .put('/product/656b681607bb4bc9843ccc1e')
+            .put('/product/656ddbba8de058978199cef8') // Insert a ID valid
             .send(updateProduct);
 
         expect(response.statusCode).toBe(200);
@@ -81,7 +81,7 @@ describe('DELETE /product/:id', () => {
 
     it('should delete a product and return 200 status', async () => {
         const response = await request(server)
-            .delete('/product/656b681607bb4bc9843ccc1e');
+            .delete('/product/656ddbba8de058978199cef8'); // Insert a ID valid
 
         expect(response.statusCode).toBe(200);
     });
